@@ -3,32 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consejos</title>
+    <title>Ciberseguridad</title>
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/funciones.js"> </script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav class="navbar bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid lead">
             <a class="navbar-item text-decoration-none  ms-5" href="index.html">
-            <img src="logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            <img src="assets/img/logo.png" alt="Logo" width="70" height="35" class="d-inline-block align-text-top logo-button">
             Ciberseguridad
             </a>
             <ul class="nav nav-pills justify-content-end me-5">
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="index.html">INICIO</a>
+                    <a class="nav-link" alt="boton para ir a la seccion de inicio" aria-current="page" href="index.html">INICIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="amenzas.html">AMENAZAS</a>
+                    <a class="nav-link " alt="boton para ir a la seccion de amenazas" href="amenzas.html">AMENAZAS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="consejos.html">CONSEJOS</a>
+                    <a class="nav-link active" alt="boton para ir a la seccion de consejos" href="consejos.html">CONSEJOS</a>
                 </li>
             </ul>
         </div>
     </nav>  
+    <div class="container mt-4 mb-5">
+        <h2 class="mb-4 text-center">Buenas Prácticas de Ciberseguridad</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr class="text-center">
+                        <th class="text-primary" scope="col">Práctica</th>
+                        <th class="text-primary" scope="col">¿Por qué es importante?</th>
+                        <th class="text-primary" scope="col">¿Cómo implementarla?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong class="text-info">Usa contraseñas fuertes y únicas</strong></td>
+                        <td class="text-info">Evita que accedan a tus cuentas si una contraseña se filtra.</td>
+                        <td class="text-info">Usa frases largas o combinaciones de letras, números y símbolos. Usa un gestor de contraseñas como Bitwarden o 1Password.</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-primary">Activa la autenticación multifactor (MFA)</strong></td>
+                        <td class="text-primary">Añade una capa extra de seguridad, incluso si roban tu contraseña.</td>
+                        <td class="text-primary">Actívala en correos, redes sociales, bancos y servicios críticos. Usa apps como Google Authenticator.</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-info">Mantén actualizados tus dispositivos y apps</strong></td>
+                        <td class="text-info">Las actualizaciones parchean vulnerabilidades conocidas.</td>
+                        <td class="text-info">Configura actualizaciones automáticas en tu sistema operativo, navegador y aplicaciones.</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-primary">Desconfía de enlaces y archivos sospechosos</strong></td>
+                        <td class="text-primary">El phishing y el malware suelen llegar por correo, mensajes o descargas.</td>
+                        <td class="text-primary">Verifica el remitente, no abras archivos inesperados y usa herramientas como VirusTotal para escanear.</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-info">Protege tu red doméstica</strong></td>
+                        <td class="text-info">Una red vulnerable puede exponer todos tus dispositivos conectados.</td>
+                        <td class="text-info">Cambia el nombre y contraseña del router, usa cifrado WPA3 y desactiva el acceso remoto si no lo necesitas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-primary">Haz copias de seguridad periódicas</strong></td>
+                        <td class="text-primary">Te permite recuperar tus datos en caso de ransomware, fallos o robos.</td>
+                        <td class="text-primary">Usa la regla 3-2-1: 3 copias, en 2 medios diferentes, 1 fuera de línea (ej: disco duro externo).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row mt-2 justify-content-center text-center">
+            <h2>Contacto</h2>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-primary">Email</label>
+                <input type="email" class="form-control" id="Email" data-bs-theme="dark" placeholder="email@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-primary">nombre</label>
+                <input type="text" class="form-control" id="nombre" data-bs-theme="dark" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-primary">Recibir mas información</label>
+                <select name="" class="form-select" id="información" data-bs-theme="dark">
+                    <option value="0" selected >Seleccione:</option>
+                    <option value="1">Contraseñas</option>
+                    <option value="2">MFA</option>
+                    <option value="3">Actualizaciones dispositivos y apps</option>
+                    <option value="4">Enlaces y archivos sospechosos</option>
+                    <option value="5">Red doméstica</option>
+                    <option value="6">Copias de seguridad</option>
+                </select>
+                <input type="button" name="Enviar" id="enviar" class="btn btn-primary mt-2" value="Enviar">
+            </div>
+        </div>
+        <div class="row text-center">
+            <h2>Test de ciberseguridad</h2>
+            <input type="button" value="Iniciar Test" class="btn btn-primary" id="iniciarTest">
+        </div>
+        <br>
+    </div>  
+    <footer class="footer fixed-bottom container-fluid text-center bg-dark text-white mt-auto p-1">
+            <p>&copy; 2025 Ciberseguridad. Todos los derechos reservados.</p>
+    </footer>
+
+    <!--modal Formulario -->
+    <div class="modal fade" id="modalTest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Test de ciberseguridad</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="pregunta1" class="form-label text-primary">1. ¿Cuál de las siguientes es la mejor práctica para crear una contraseña segura?</label>
+                        <select class="form-select" id="pregunta1" data-bs-theme="dark">
+                            <option value="0" selected>Seleccione una opción</option>
+                            <option value="1">Usar tu fecha de nacimiento o el nombre de tu mascota.</option>
+                            <option value="2">Usar una palabra común del diccionario con un número al final (ej: "password1").</option>
+                            <option value="3">Usar una frase larga con mayúsculas, números y símbolos (ej: "C0m3r!EnSalud@2025").</option>
+                            <option value="4">Usar la misma contraseña para todas tus cuentas.</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pregunta2" class="form-label text-primary">2. ¿Qué es la autenticación multifactor (MFA)?</label>
+                        <select class="form-select" id="pregunta2" data-bs-theme="dark">
+                            <option value="0" selected>Seleccione una opcion</option>
+                            <option value="1">Un método para guardar contraseñas en la nube.</option>
+                            <option value="2">Un sistema que requiere dos o más formas de verificación para acceder a una cuenta (ej: contraseña + código en el móvil).</option>
+                            <option value="3">Un software para escanear virus en tu computadora.</option>
+                            <option value="4">Una red social para profesionales de la ciberseguridad.</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pregunta3" class="form-label text-primary">3. ¿Cuál de estas acciones es un ejemplo de "phishing"?</label>
+                        <select class="form-select" id="pregunta3" data-bs-theme="dark">
+                            <option value="0" selected>Seleccione una opcion</option>
+                            <option value="1">Recibir un correo de tu banco con un resumen de tu cuenta.</option>
+                            <option value="2">Recibir un correo urgente que parece de tu jefe pidiéndote que hagas clic en un enlace para "verificar tu cuenta".</option>
+                            <option value="3">Descargar una app de una tienda oficial como Google Play.</option>
+                            <option value="4">Actualizar el sistema operativo de tu teléfono.</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pregunta4" class="form-label text-primary">4. ¿Por qué es importante mantener actualizado el software de tus dispositivos?</label>
+                        <select class="form-select" id="pregunta4" data-bs-theme="dark">
+                            <option value="0" selected>Seleccione una opcion</option>
+                            <option value="1">Para que el dispositivo funcione más rápido.</option>
+                            <option value="2">Para corregir vulnerabilidades de seguridad que podrían ser explotadas por hackers.</option>
+                            <option value="3">Solo para tener las últimas funciones estéticas.</option>
+                            <option value="4">Para consumir más datos móviles.</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pregunta5" class="form-label text-primary">5. ¿Cuál es la regla 3-2-1 para las copias de seguridad?</label>
+                        <select class="form-select" id="pregunta5" data-bs-theme="dark">
+                            <option value="0" selected>Seleccione una opcion</option>
+                            <option value="1">Hacer 3 copias en el mismo disco duro, 2 veces al año, y 1 en la nube.</option>
+                            <option value="2">Guardar 1 copia en 3 lugares distintos cada 2 meses.</option>
+                            <option value="3">Tener 3 copias de tus datos, en 2 medios diferentes, y 1 copia fuera de línea (ej: disco duro externo).</option>
+                            <option value="4">Usar 3 servicios de nube diferentes para guardar 2 copias cada uno.</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="enviarTest">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal Puntaje -->
+    <div class="modal fade" id="puntaje" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Resultado del Test</h1>
+                </div>
+                <div class="modal-body">
+                    <h2 class="text-center text-primary" id="resultado">Tu puntaje es: </h2>
+                    <div class="mb-3">
+                        <label class="form-label text-info" id="pregunta1Result">Pregunta 1: Respuesta incorrecta</label>
+                        <label class="form-label text-info">¿Cuál de las siguientes es la mejor práctica para crear una contraseña segura?</label>
+                        <p class="text-info">R: Usar una frase larga con mayúsculas, números y símbolos (ej: "C0m3r!EnSalud@2025").</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-info" id="pregunta2Result">Pregunta 2: Respuesta incorrecta</label>
+                        <label class="form-label text-info">¿Qué es la autenticación multifactor (MFA)?</label>
+                        <p class="text-info">R: Un sistema que requiere dos o más formas de verificación para acceder a una cuenta (ej: contraseña + código en el móvil).</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-info" id="pregunta3Result">Pregunta 3: Respuesta incorrecta</label>
+                        <label class="form-label text-info">¿Cuál de estas acciones es un ejemplo de "phishing"?</label>
+                        <p class="text-info">R: Recibir un correo urgente que parece de tu jefe pidiéndote que hagas clic en un enlace para "verificar tu cuenta".</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-info" id="pregunta4Result">Pregunta 4: Respuesta incorrecta</label>
+                        <label class="form-label text-info">¿Por qué es importante mantener actualizado el software de tus dispositivos?</label>
+                        <p class="text-info">R: Para corregir vulnerabilidades de seguridad que podrían ser explotadas por hackers.</p>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-info" id="pregunta5Result">Pregunta 5: Respuesta incorrecta</label>
+                        <label class="form-label text-info">¿Cuál es la regla 3-2-1 para las copias de seguridad?</label>
+                        <p class="text-info">R: Tener 3 copias de tus datos, en 2 medios diferentes, y 1 copia fuera de línea (ej: disco duro externo).</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal contacto -->
+    <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Contacto</h1>
+                </div>
+                <div class="modal-body">
+                    <p class="text-info" id="TextoContacto"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#iniciarTest").click(function(){
+                $("#modalTest").modal("show");
+            });
+
+            $("#enviarTest").click(function(){
+                let puntaje = 0;
+                if($("#pregunta1").val() == "3") {
+                   $("#pregunta1Result").text("Pregunta 1: Respuesta correcta") 
+                   puntaje++ ;   
+                }
+                if($("#pregunta2").val() == "2") {
+                 $("#pregunta2Result").text("Pregunta 2: Respuesta correcta");
+                   puntaje++ ; 
+                }
+                if($("#pregunta3").val() == "2"){
+                 $("#pregunta3Result").text("Pregunta 3: Respuesta correcta");
+                   puntaje++ ; 
+                }
+                if($("#pregunta4").val() == "2") {
+                 $("#pregunta4Result").text("Pregunta 4: Respuesta correcta");
+                   puntaje++ ; 
+                }
+                if($("#pregunta5").val() == "3") {
+                    $("#pregunta5Result").text("Pregunta 5: Respuesta correcta");
+                    puntaje++ ; 
+                }
+                $("#resultado").text("Tu puntaje es: " + puntaje + " de 5");
+                $("#modalTest select").val("0");
+                $("#puntaje").modal("show");
+            });
+
+            $("#enviar").click(function(){
+                let email = $("#Email").val();
+                let nombre = $("#nombre").val();
+                let info = $("#información").val();
+                if (validarEmail(email) == false) {
+                    alert("Por favor, ingrese un correo electrónico válido.");
+                    return;
+                }
+                if(email == "" || nombre == "" || info == "0"){
+                    alert("Por favor, complete todos los campos.");
+                } else {
+                    $("#contacto").modal("show");
+                    $("#TextoContacto").text("Gracias " + nombre + ". Te contactaremos pronto al correo: " + email + " con información sobre: " + $("#información option:selected").text());
+                    $("#Email").val("");
+                    $("#nombre").val("");
+                    $("#información").val("0");
+                }
+            });
+        });
+    </script>
 </body>
 </html>

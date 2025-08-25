@@ -9,3 +9,27 @@ body {
     color: #FFFFFF;
 }
 
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: #0D1B2E;
+    --bs-table-striped-color: #E6F1FF;
+    --bs-table-hover-bg: #1A2B4D;
+    --bs-table-border-color: #64FFDA;
+}
+
+.table-dark {
+    --bs-table-bg: #112240;
+    --bs-table-striped-bg: #1A2B4D;
+    --bs-table-striped-color: #E6F1FF;
+    --bs-table-active-bg: #1A2B4D;
+    --bs-table-hover-bg: #1A2B4D;
+    --bs-table-border-color: #64FFDA;
+}
+
+th, td {
+    border-color: #64FFDA !important;
+}
+
+h2 {
+    color: #64acff; /* Celeste para títulos */
+}
