@@ -31,9 +31,385 @@
                 </li>
             </ul>
         </div>
-    </nav>  
+    </nav>
+    <div class="container mt-4 mb-5" alt="Contenido principal de la pagina de amenazas">
+        <h2 class="mb-4 text-center" alt="Titulo de la seccion de amenazas">Amenazas</h2>
+        <div class="row">
+            <!-- Card Phishing -->
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3" data-bs-theme="dark" alt="Tarjeta informativa sobre Phishing">
+                    <div class="card-header">
+                        <h2>Phishing</h2>
+                    </div>
+                    <div class="card-body text-info" alt="Descripcion de la amenaza Phishing">
+                        <h5 class="card-title text-primary">Descripcion</h5>
+                        <p class="card-text">Técnica de ingeniería social que engaña a las víctimas para que revelen información confidencial (contraseñas, datos bancarios) o descarguen malware, haciéndose pasar por una entidad legítima (bancos, empresas, contactos conocidos).</p>
+                    </div>
+                    <div class="card-footer text-end" alt="Botones para obtener mas informacion y ver un video informativo sobre Phishing">
+                        <input type="button" value="Más Información" id="infoPishing" class="btn btn-primary">
+                        <input type="button" value="Video Informativo" id="videoPishing" class="btn btn-primary">
+                    </div>
+                </div>
+            </div>
+            <!-- Card Ransomware -->
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3" data-bs-theme="dark" alt="Tarjeta informativa sobre Ransomware">
+                    <div class="card-header">
+                        <h2>Ransomware</h2>
+                    </div>
+                    <div class="card-body text-info" alt="Descripcion de la amenaza Ransomware">
+                        <h5 class="card-title text-primary">Descripcion</h5>
+                        <p class="card-text">Tipo de malware que cifra los archivos de la víctima y exige un rescate (generalmente en criptomonedas) para restaurarlos. Puede afectar a individuos, empresas o incluso infraestructuras críticas.</p>
+                    </div>
+                    <div class="card-footer text-end" alt="Botones para obtener mas informacion y ver un video informativo sobre Ransomware">
+                        <input type="button" value="Más Información" id="infoRansomware" class="btn btn-primary">
+                        <input type="button" value="Video Informativo" id="videoRansomware" class="btn btn-primary">
+                    </div>
+                </div>
+            </div>
+              <!-- Card Malware -->
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3" data-bs-theme="dark" alt="Tarjeta informativa sobre Malware">
+                    <div class="card-header">
+                        <h2>Malware</h2>
+                    </div>
+                    <div class="card-body text-info" alt="Descripcion de la amenaza Malware">
+                        <h5 class="card-title text-primary">Descripcion</h5>
+                        <p class="card-text">Software malicioso diseñado para dañar, explotar o infiltrarse en sistemas sin consentimiento. Incluye virus, gusanos, troyanos, spyware y adware.</p>
+                    </div>
+                    <div class="card-footer text-end" alt="Botones para obtener mas informacion y ver un video informativo sobre Malware">
+                        <input type="button" value="Más Información" id="infoMalware" class="btn btn-primary">
+                        <input type="button" value="Video Informativo" id="videoMalware" class="btn btn-primary">
+                    </div>
+                </div>
+            </div>
+              <!-- Card DDoS -->
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card mb-3" data-bs-theme="dark" alt="Tarjeta informativa sobre DDoS">
+                    <div class="card-header">
+                        <h2>DDoS</h2>
+                    </div>
+                    <div class="card-body text-info" alt="Descripcion de la amenaza DDoS">
+                        <h5 class="card-title text-primary">Descripcion</h5>
+                        <p class="card-text">Inundación masiva de tráfico falso a un servidor, sitio web o red, con el objetivo de saturarlo y dejarlo inaccesible para usuarios legítimos. Se realiza desde múltiples dispositivos (a menudo "zombis" infectados).</p>
+                    </div>
+                    <div class="card-footer text-end" alt="Botones para obtener mas informacion y ver un video informativo sobre DDoS">
+                        <input type="button" value="Más Información" id="infoDDoS" class="btn btn-primary">
+                        <input type="button" value="Video Informativo" id="videoDDoS" class="btn btn-primary">
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </div>
+    <!-- FOOTER -->
     <footer class="footer mt-auto fixed-bottom container-fluid text-center bg-dark text-white p-1 mt-auto">
             <p>&copy; 2025 Ciberseguridad. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Modal para Más Información Phishing -->
+    <div class="modal fade" id="infoModalPishing" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-theme="dark" alt="Modal de mas informacion sobre Phishing">
+        <div class="modal-dialog">
+            <div class="modal-content" data-bs-theme="dark">
+                <div class="modal-header">
+                    <h2> Más Información Phishing </h2>
+                </div>
+                <div class="modal-body" id="infoModalBody">
+                    <div class="mb-3 text-info" alt="Objetivo del Phishing">
+                        <h5 class="text-primary">Objetivo del Phishing</h5>
+                        <p>Robar información confidencial (credenciales, datos financieros, información personal) o instalar malware en el dispositivo de la víctima, aprovechando la confianza y el error humano.</p>
+                    </div>
+                     <div class="mb-3 text-info" alt="Tipos de Phishing">
+                        <h5 class="text-primary">Tipos de Phishing</h5>
+                        <p>Existen diferentes tipos de phishing, como phishing de correo electrónica, phishing en redes sociales y phishing en sitios web.</p>
+                    </div>
+                    <div class="mb-3 text-info" alt="Motivaciones del atacante">
+                        <h5 class="text-primary">Motivaciones del atacantes</h5>
+                        <ul>
+                            <li>Robo de identidad: Usar datos personales para abrir cuentas, solicitar créditos o cometer fraudes.</li>
+                            <li>Acceso a cuentas: Tomar control de correos, redes sociales o sistemas corporativos (ej: para enviar más phishing desde una cuenta hackeada).</li>
+                            <li>Espionaje corporativo: Obtener acceso a información sensible de empresas (secretos comerciales, datos de clientes).</li>
+                            <li>Fraude financiero: Redirigir pagos o vaciar cuentas bancarias.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3 text-info" alt="Impacto de la victima">
+                        <h5 class="text-primary">Impacto de la victima</h5>
+                        <ul>
+                            <li>Pérdida de dinero (transacciones no autorizadas).</li>
+                            <li>Daño reputacional (si se usa la cuenta para enviar spam o estafas).</li>
+                            <li>Acceso no autorizado a otros servicios (si se reutilizan contraseñas).</li>
+                            <li>Infección con malware (si el phishing incluye un archivo adjunto o enlace malicioso).</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3 text-info" alt="Casos de Phishing">
+                        <h5 class="text-primary">Casos de Phishing</h5>
+                        <ul>
+                            <li>Algunos casos famosos de phishing incluyen el ataque a Sony Pictures en 2014 y el ataque a la campaña presidencial de Hillary Clinton en 2016.</li>
+                            <li>En 2020, un ataque de phishing dirigido a empleados de Twitter permitió a los atacantes tomar control de cuentas verificadas como las de Elon Musk y Barack Obama para promover una estafa de Bitcoin.</li>
+                            <li>En 2021, se reportó un aumento significativo en ataques de phishing relacionados con la pandemia de COVID-19, donde los atacantes se hacían pasar por organizaciones de salud para robar información personal.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Más Información Ransomware -->
+    <div class="modal fade" id="infoModalRansomware" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-theme="dark" alt="Modal de mas informacion sobre Ransomware">
+        <div class="modal-dialog">
+            <div class="modal-content" data-bs-theme="dark">
+                <div class="modal-header">
+                    <h2> Más Información Ransomware </h2>
+                </div>
+                <div class="modal-body" id="infoModalBody">
+                    <div class="mb-3 text-info" alt="Objetivo del Ransomware">
+                        <h5 class="text-primary">Objetivo del Ransomware</h5>
+                        <p>Extorsionar a la víctima (individuo, empresa o institución) bloqueando el acceso a sus datos y exigiendo un pago (generalmente en criptomonedas) a cambio de la clave de descifrado.</p>
+                    </div>
+                    <div class="mb-3 text-info" alt="Tipos de Ransomware">
+                        <h5 class="text-primary">Tipos de Ransomware</h5>
+                        <p>Existen diferentes tipos de ransomware, como el cifrado de archivos (cifra datos y exige rescate), el secuestro de pantalla (bloquea el acceso al sistema) y el ransomware como servicio (RaaS), donde los desarrolladores venden o alquilan kits de ransomware a otros criminales.</p>
+                    </div>
+                    <div class="mb-3 text-info" alt="Motivaciones del atacante">
+                        <h5 class="text-primary">Motivaciones del atacantes</h5>
+                        <ul>
+                            <li>Ganancia económica directa: El rescate puede oscilar entre cientos y millones de dólares (ej: Colonial Pipeline pagó $4.4 millones en 2021).</li>
+                            <li>Disrupción operativa: En ataques a infraestructuras críticas (hospitales, gobiernos), el objetivo puede ser caos social o político, incluso si no se paga el rescate.</li>
+                            <li>Robo de datos + extorsión: Algunos grupos (double extortion) roban datos antes de cifrarlos y amenazan con publicarlos si no se paga.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3 text-info" alt="Impacto de la victima">
+                        <h5 class="text-primary">Impacto de la victima</h5>
+                        <ul>
+                            <li>Pérdida de productividad: Sistemas inoperativos durante días o semanas.</li>
+                            <li>Costos de recuperación: Pago de rescate (sin garantía de recuperación), contratar expertos en forense digital, o reconstruir datos desde cero.</li>
+                            <li>Daño reputacional: Clientes o usuarios pierden confianza en la organización.</li>
+                            <li>Multas legales: Si se filtran datos regulados (ej: bajo GDPR o Ley Chilena 19.628).</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3 text-info" alt="Casos de Ransomware">
+                        <h5 class="text-primary">Casos de Ransomware</h5>
+                        <ul>
+                            <li>Colombia: Colonial Pipeline pagó $4.4 millones en 2021.</li>
+                            <li>Reino Unido: NHS (Servicio Nacional de Salud) sufrió un ataque en 2017 que afectó a múltiples hospitales.</li>
+                            <li>Estados Unidos: JBS, el mayor procesador de carne del mundo, pagó $11 millones en 2021.</li>
+                            <li>Chile: En 2020, la empresa de telecomunicaciones Entel fue víctima de un ataque de ransomware que afectó sus servicios.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Más Información Malware -->
+    <div class="modal fade" id="infoModalMalware" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-theme="dark" alt="Modal de mas informacion sobre Malware">
+        <div class="modal-dialog">
+            <div class="modal-content" data-bs-theme="dark">
+                <div class="modal-header">
+                    <h2> Más Información Malware </h2>
+                </div>
+                <div class="modal-body" id="infoModalBody">
+                    <div class="mb-3 text-info" alt="Objetivo del Malware">
+                        <h5 class="text-primary">Objetivo del Malware</h5>
+                        <p>Comprometer la integridad, confidencialidad o disponibilidad de un sistema o red. El malware puede tener múltiples propósitos, desde espiar hasta destruir datos o usar el dispositivo para otros ataques.</p>
+                    </div>
+                     <div class="mb-3 text-info" alt="Tipos de Malware">
+                        <h5 class="text-primary">Tipos de Malware</h5>
+                        <p>Existen diferentes tipos de malware, como el malware de virus, el malware de spyware y el malware de botnet.</p>
+                    </div>
+                    <div class="mb-3 text-info" alt="Motivaciones del atacante">
+                        <h5 class="text-primary">Motivaciones del atacantes (según tipo de malware)</h5>
+                        <ul>
+                            <li>Spyware: Robar información (contraseñas, hábitos de navegación, datos corporativos).</li>
+                            <li>Troyanos: Crear una "puerta trasera" (backdoor) para acceso remoto futuro.</li>
+                            <li>Gusanos: Propagarse automáticamente a otros dispositivos en la red (ej: NotPetya).</li>
+                            <li>Adware: Generar ingresos mediante publicidad no deseada.</li>
+                            <li>Botnets: Convertir dispositivos en "zombis" para ataques DDoS o envío de spam.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3 text-info" alt="Impacto de la victima">
+                        <h5 class="text-primary">Impacto de la victima</h5>
+                        <ul>
+                            <li>Pérdida de privacidad (keyloggers, captura de pantalla).</li>
+                            <li>Robo de recursos: El dispositivo se ralentiza o se usa para minar criptomonedas (cryptojacking).</li>
+                            <li>Daño a sistemas: Corrupción de archivos o inutilización de hardware.</li>
+                            <li>Propagación a otros: Infección de contactos o redes corporativas.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3 text-info" alt="Casos de Malware">
+                        <h5 class="text-primary">Casos de Malware</h5>
+                        <ul>
+                            <li>ILOVEYOU (2000): Gusano que se propagó por correo electrónico con el asunto "ILOVEYOU", causando daños estimados en $10 mil millones.</li>
+                            <li>Stuxnet (2010): Malware sofisticado que atacó instalaciones nucleares iraníes, considerado el primer ciberarma conocido.</li>
+                            <li>Emotet (2014-2021): Troyano bancario que evolucionó para distribuir otros tipos de malware y formar botnets.</li>
+                            <li>Chile: En 2017, el malware WannaCry afectó a varios hospitales del sistema de salud público chileno, causando interrupciones significativas en los servicios médicos.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal para Más Información DDoS -->
+    <div class="modal fade" id="infoModalDDoS" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-theme="dark" alt="Modal de mas informacion sobre DDoS">
+        <div class="modal-dialog">
+            <div class="modal-content" data-bs-theme="dark">
+                <div class="modal-header">
+                    <h2> Más Información DDoS </h2>
+                </div>
+                <div class="modal-body" id="infoModalBody">
+                    <div class="mb-3 text-info" alt="Objetivo del DDoS">
+                        <h5 class="text-primary">Objetivo del DDoS</h5>
+                        <p>Dejar un servicio, sitio web o red inaccesible para sus usuarios legítimos, saturando su capacidad con tráfico falso o solicitudes maliciosas.</p>
+                    </div>
+                     <div class="mb-3 text-info" alt="Tipos de DDoS">
+                        <h5 class="text-primary">Tipos de DDoS</h5>
+                        <p>Existen diferentes tipos de DDoS, como DDoS de tipo TCP, DDoS de tipo UDP y DDoS de tipo ICMP.</p>
+                    </div>
+                    <div class="mb-3 text-info" alt="Motivaciones del atacante">
+                        <h5 class="text-primary">Motivaciones del atacantes (según tipo de malware)</h5>
+                        <ul>
+                            <li>Extorsión: Exigir pago para detener el ataque (ej: "Paga 10 BTC o seguiremos atacando").</li>
+                            <li>Competencia desleal: Dejar fuera de línea a un competidor (ej: ataques a e-commerce en Black Friday).</li>
+                            <li>Activismo (hacktivismo): Protestar contra una organización (ej: Anonymous atacando gobiernos).</li>
+                            <li>Distracción: Ocupar a los equipos de seguridad mientras se ejecuta otro ataque (ej: robo de datos).</li>
+                            <li>Daño reputacional: Generar desconfianza en usuarios o clientes.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3 text-info" alt="Impacto de la victima">
+                        <h5 class="text-primary">Impacto de la victima</h5>
+                        <ul>
+                            <li>Pérdidas económicas: Por ventas no realizadas o costos de mitigación.</li>
+                            <li>Degradación de servicios: Latencia, caídas intermitentes o indisponibilidad total.</li>
+                            <li>Daño a la marca: Usuarios asocian la empresa con inestabilidad.</li>
+                            <li>Costos de infraestructura: Necesidad de escalar servidores o contratar servicios anti-DDoS.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3 text-info" alt="Casos de DDoS">
+                        <h5 class="text-primary">Casos de DDoS</h5>
+                        <ul>
+                            <li>Ataque a Dyn (2016): Botnet Mirai, compuesta por dispositivos IoT infectados (cámaras, routers, DVRs). El tráfico alcanzó 1.2 Tbps. Servicios inaccesibles durante horas en EE.UU. y Europa.</li>
+                            <li>Ataque a GitHub (2018): Ataque de amplificación de Memcached (servidores mal configurados), generando un tráfico récord de 1.35 Tbps.GitHub sufrió 10 minutos de inactividad, pero logró mitigar el ataque rápidamente.</li>
+                            <li>Ataque a Spamhaus (2013): Ataque de 300 Gbps usando amplificación DNS, orquestado por un grupo vinculado a CyberBunker (un proveedor de hosting controvertido).Ralentizó partes de Internet global, afectando a servicios como Netflix.</li>
+                            <li>Ataque a Sony PlayStation Network (2014): Grupo Lizard Squad usó botnets para saturar los servidores con tráfico, dejando los servicios fuera de línea durante días.Millones de usuarios no pudieron jugar en línea durante las fiestas.</li>
+                            <li>Ataque a Estonia (2007): Primer ataque DDoS a nivel estatal, atribuido a grupos rusos. Usó botnets para saturar sitios web con tráfico.Paralizó servicios públicos y privados durante semanas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal video Pishing -->
+    <div class="modal fade" id="infoVideoPishing" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-theme="dark" alt="Modal video Pishing">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" data-bs-theme="dark">
+                <div class="modal-header">
+                    <h2> Video Pishing </h2>
+                </div>
+                <div class="modal-body" id="pishing"> 
+                    <iframe width="100%" height="720" src="http://www.youtube.com/embed/UuuAlP7ay6U?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="vidPishing" onclick="pausarVideo('pishing')" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal video Ramsoware -->
+    <div class="modal fade" id="infoVideoRansomware" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-theme="dark" alt="Modal video Ramsoware">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" data-bs-theme="dark">
+                <div class="modal-header">
+                    <h2> Video Romsoware </h2>
+                </div>
+                <div class="modal-body" id="romsoware"> 
+                    <iframe width="100%" height="720" src="http://www.youtube.com/embed/ampwQnx3uXE?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="vidRomsoware" onclick="pausarVideo('romsoware')" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal video MALWARE -->
+    <div class="modal fade" id="infoVideoMalware" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-theme="dark" alt="Modal video Malware">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" data-bs-theme="dark">
+                <div class="modal-header">
+                    <h2> Video Malware </h2>
+                </div>
+                <div class="modal-body" id="malware"> 
+                    <iframe width="100%" height="720" src="http://www.youtube.com/embed/HuasitV4lcw?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="vidMalware" onclick="pausarVideo('malware')" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal video DDoS -->
+    <div class="modal fade" id="infoVideoDDoS" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" data-bs-theme="dark" alt="Modal video DDoS">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" data-bs-theme="dark">
+                <div class="modal-header">
+                    <h2> Video DDoS </h2>
+                </div>
+                <div class="modal-body" id="ddos"> 
+                    <iframe width="100%" height="720" src="http://www.youtube.com/embed/_sVObRVfoms?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="vidDDoS" onclick="pausarVideo('ddos')" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#infoPishing").click(function(){
+                $("#infoModalPishing").modal("show");
+            });
+
+            $("#infoRansomware").click(function(){
+                $("#infoModalRansomware").modal("show");
+            });
+
+            $("#infoMalware").click(function(){
+                $("#infoModalMalware").modal("show");
+            });
+
+            $("#infoDDoS").click(function(){
+                $("#infoModalDDoS").modal("show");
+            });
+
+            $("#videoPishing").click(function(){
+                $("#infoVideoPishing").modal("show");
+            });
+
+             $("#videoRansomware").click(function(){
+                $("#infoVideoRansomware").modal("show");
+            });
+
+             $("#videoMalware").click(function(){
+                $("#infoVideoMalware").modal("show");
+            });
+
+             $("#videoDDoS").click(function(){
+                $("#infoVideoDDoS").modal("show");
+            });
+        });
+    </script>
 </body>
 </html>
